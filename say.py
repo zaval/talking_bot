@@ -33,8 +33,6 @@ def loader(parts):
 		if not part:
 			continue
 
-		print('http://translate.google.com/translate_tts?tl={}'.format(lang))
-
 		request = Request('http://translate.google.com/translate_tts?tl={}'.format(lang), data='q={}'.format(quote(part)).encode())
 		request.add_header('Host', 'translate.google.com')
 		request.add_header('User-Agent', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:30.0) Gecko/20100101 Firefox/30.0')
